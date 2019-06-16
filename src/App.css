@@ -70,12 +70,29 @@ h1{
   margin-bottom: 11px;
   direction: ltr;
 }
+.rating__child{
+  display: flex;
+  justify-content: flex-end;
+}
+.rating__child .rating__lead{
+  order: 1;
+  margin-right: 10px;
+}
 .rating__hearts__heart {
   display: none;
 }
+.rating__hearts__mask{
+  display: inline-block;
+  overflow: hidden;
+  position: absolute;
+  direction: ltr;
+  background: #222;
+  width: 15px;
+  height: 25px;
+}
 .rating__hearts svg{
-  width: 100%;
-  height: 100%;
+  width: 25px;
+  height: 25px;
 }
 .rating__hearts_label {
   color: #ddd;
@@ -86,8 +103,9 @@ h1{
   height: 25px;
 }
 .rating__hearts_label:not(:last-child) {
-  margin-left: 12px;
+  margin-left: 10px;
 }
+
 /***** CSS Magic to Highlight Stars on Hover *****/
 .rating__hearts__heart:checked ~ label svg,
 .rating__hearts:not(:checked) > label:hover svg,
