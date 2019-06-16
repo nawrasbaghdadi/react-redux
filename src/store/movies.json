@@ -1,62 +1,64 @@
-[
-  {
-    "name": "Fight Club",
-    "thumb": "fight_club.jpg",
-    "rate": 0,
-    "order": 0
-  },
-  {
-    "name": "The Silence of the Lambs",
-    "thumb": "she_silence_of_the_lambs.jpg",
-    "rate": 0,
-    "order": 0
-  },
-  {
-    "name": "Se7en",
-    "thumb": "seven.jpg",
-    "rate": 0,
-    "order": 0
-  },
-  {
-    "name": "The Dark Knight",
-    "thumb": "the_dark_knight.jpg",
-    "rate": 0,
-    "order": 0
-  },
-  {
-    "name": "Inception",
-    "thumb": "inception.jpg",
-    "rate": 0,
-    "order": 0
-  },
-  {
-    "name": "The Matrix",
-    "thumb": "the_matrix.jpg",
-    "rate": 0,
-    "order": 0
-  },
-  {
-    "name": "the Green Mile",
-    "thumb": "the_green_mile.jpg",
-    "rate": 0,
-    "order": 0
-  },
-  {
-    "name": "The Godfather",
-    "thumb": "the_godfather.jpg",
-    "rate": 0,
-    "order": 0
-  },
-  {
-    "name": "Ice Age",
-    "thumb": "ice_age.jpg",
-    "rate": 0,
-    "order": 0
-  },
-  {
-    "name": "Madagascar",
-    "thumb": "madagascar.jpg",
-    "rate": 0,
-    "order": 0
-  }
-]
+{
+  "movies": [
+    {
+      "name": "Fight Club",
+      "thumb": "fight_club.jpg",
+      "rate": 0,
+      "order": 0
+    },
+    {
+      "name": "The Silence of the Lambs",
+      "thumb": "she_silence_of_the_lambs.jpg",
+      "rate": 0,
+      "order": 0
+    },
+    {
+      "name": "Se7en",
+      "thumb": "seven.jpg",
+      "rate": 0,
+      "order": 0
+    },
+    {
+      "name": "The Dark Knight",
+      "thumb": "the_dark_knight.jpg",
+      "rate": 0,
+      "order": 0
+    },
+    {
+      "name": "Inception",
+      "thumb": "inception.jpg",
+      "rate": 0,
+      "order": 0
+    },
+    {
+      "name": "The Matrix",
+      "thumb": "the_matrix.jpg",
+      "rate": 0,
+      "order": 0
+    },
+    {
+      "name": "the Green Mile",
+      "thumb": "the_green_mile.jpg",
+      "rate": 0,
+      "order": 0
+    },
+    {
+      "name": "The Godfather",
+      "thumb": "the_godfather.jpg",
+      "rate": 0,
+      "order": 0
+    },
+    {
+      "name": "Ice Age",
+      "thumb": "ice_age.jpg",
+      "rate": 0,
+      "order": 0
+    },
+    {
+      "name": "Madagascar",
+      "thumb": "madagascar.jpg",
+      "rate": 0,
+      "order": 0
+    }
+  ]
+}

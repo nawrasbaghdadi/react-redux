@@ -1,8 +1,9 @@
 import React from "react";
-import { createStore } from "react-redux";
+import { createStore } from "redux";
 import "./App.css";
+import { reducer } from "./store/reduser";
 
-const store = createStore();
+const store = createStore(reducer);
 
 function App() {
   return (
