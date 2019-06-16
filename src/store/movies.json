@@ -1,4 +1,5 @@
 {
+  "random_button_clicked":false,
   "movies": [
     {
       "name": "Fight Club",
@@ -8,7 +9,7 @@
     },
     {
       "name": "The Silence of the Lambs",
-      "thumb": "she_silence_of_the_lambs.jpg",
+      "thumb": "the_silence_of_the_lambs.jpg",
       "rate": 0,
       "order": 0
     },
@@ -37,7 +38,7 @@
       "order": 0
     },
     {
-      "name": "the Green Mile",
+      "name": "The Green Mile",
       "thumb": "the_green_mile.jpg",
       "rate": 0,
       "order": 0

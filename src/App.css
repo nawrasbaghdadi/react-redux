@@ -1,33 +1,104 @@
-.App {
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+body{
+  background: #e2e2e2;
+}
+.App{
+  margin:20px 20px;
   text-align: center;
 }
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+h1{
+  font-size: 25px;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.movie_card{
+  width: 600px;
+  height: auto;
+  margin: 30px auto;
+  display: flex;
+  justify-content: flex-start;
+  background: #222;
+  border-radius: 20px;
+  padding: 10px;
+  color:#fff;
+}
+.movie_card__media{
+  margin-right: 20px;
+  flex: 1 0 25%;
+  align-self: center;
+}
+.movie_card__info{
+  text-align: center;
+  flex: 1 0 60%;
+}
+.movie_card__info__title{
+  font-weight: 400;
+  text-align: left;
+  font-size: 30px;
+  margin: 20px 0 0 0;
+  letter-spacing: 1px;
+}
+.rating{
+  text-align: center;
+  direction: rtl;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-top: 20px;
+}
+.rating__lead{
+  font-size: 14px;
+  color: #ffda00;
+  font-family: tahoma;
+  text-align: left;
+  margin-bottom: 11px;
+  direction: ltr;
+}
+.rating__hearts__heart {
+  display: none;
+}
+.rating__hearts svg{
+  width: 100%;
+  height: 100%;
+}
+.rating__hearts_label {
+  color: #ddd;
+  font-size: 16px;
+  margin: 0px;
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+}
+.rating__hearts_label:not(:last-child) {
+  margin-left: 12px;
+}
+/***** CSS Magic to Highlight Stars on Hover *****/
+.rating__hearts__heart:checked ~ label svg,
+.rating__hearts:not(:checked) > label:hover svg,
+.rating__hearts:not(:checked) > label:hover ~ label svg {
+  fill: #FFD700;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* hover previous stars in list */
+.rating__hearts__heart:checked + label:hover svg,
+.rating__hearts__heart:checked ~ label:hover svg,
+.rating__hearts > label:hover ~ input:checked ~ label svg,
+.rating__hearts__heart:checked ~ label:hover ~ label svg {
+  fill: #FFED85;
 }
