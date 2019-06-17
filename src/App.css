@@ -7,8 +7,8 @@ b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
 	margin: 0;
@@ -81,18 +81,17 @@ h1{
 .rating__hearts__heart {
   display: none;
 }
-.rating__hearts__mask{
-  display: inline-block;
-  overflow: hidden;
-  position: absolute;
-  direction: ltr;
-  background: #222;
-  width: 15px;
-  height: 25px;
-}
-.rating__hearts svg{
+.rating__child svg{
   width: 25px;
   height: 25px;
+}
+.rating__child:first-child{
+  margin-bottom: 20px;
+  direction: ltr;
+  justify-content: flex-start;
+}
+.rating__child:first-child .rating__lead{
+  order:0
 }
 .rating__hearts_label {
   color: #ddd;
@@ -101,21 +100,16 @@ h1{
   display: inline-block;
   width: 25px;
   height: 25px;
-}
-.rating__hearts_label:not(:last-child) {
   margin-left: 10px;
 }
 
-/***** CSS Magic to Highlight Stars on Hover *****/
 .rating__hearts__heart:checked ~ label svg,
 .rating__hearts:not(:checked) > label:hover svg,
-.rating__hearts:not(:checked) > label:hover ~ label svg {
+.rating__hearts:not(:checked) > label:hover ~ label svg,
+.rating__hearts_label.yes svg {
   fill: #FFD700;
 }
-
-/* hover previous stars in list */
 .rating__hearts__heart:checked + label:hover svg,
-.rating__hearts__heart:checked ~ label:hover svg,
 .rating__hearts > label:hover ~ input:checked ~ label svg,
 .rating__hearts__heart:checked ~ label:hover ~ label svg {
   fill: #FFED85;

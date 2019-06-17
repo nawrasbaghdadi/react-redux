@@ -1,65 +1,65 @@
 {
-  "random_button_clicked":false,
+  "random_button_clicked": false,
   "movies": [
     {
       "name": "Fight Club",
       "thumb": "fight_club.jpg",
-      "votes": [5,2],
-      "rate":3.5
+      "votes": [5, 2],
+      "rate": 3.5
     },
     {
       "name": "The Silence of the Lambs",
       "thumb": "the_silence_of_the_lambs.jpg",
-      "votes": [5,1],
-      "rate":3
+      "votes": [5, 1],
+      "rate": 3
     },
     {
       "name": "Se7en",
       "thumb": "seven.jpg",
       "votes": [3],
-      "rate":3
+      "rate": 3
     },
     {
       "name": "The Dark Knight",
       "thumb": "the_dark_knight.jpg",
       "votes": [2],
-      "rate":2
+      "rate": 2
     },
     {
       "name": "Inception",
       "thumb": "inception.jpg",
       "votes": [1],
-      "rate":1
+      "rate": 1
     },
     {
       "name": "The Matrix",
       "thumb": "the_matrix.jpg",
       "votes": [],
-      "rate":0
+      "rate": 0
     },
     {
       "name": "The Green Mile",
       "thumb": "the_green_mile.jpg",
       "votes": [],
-      "rate":0
+      "rate": 0
     },
     {
       "name": "The Godfather",
       "thumb": "the_godfather.jpg",
       "votes": [],
-      "rate":0
+      "rate": 0
     },
     {
       "name": "Ice Age",
       "thumb": "ice_age.jpg",
       "votes": [],
-      "rate":0
+      "rate": 0
     },
     {
       "name": "Madagascar",
       "thumb": "madagascar.jpg",
       "votes": [],
-      "rate":0
+      "rate": 0
     }
   ]
 }
