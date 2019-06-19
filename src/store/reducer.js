@@ -1,23 +1,25 @@
 import data from "./movies.json";
+
 const initialState = data;
 
 function avg(arr) {
   let sum = arr.reduce((acc, crr) => {
     return acc + crr;
   }, 0);
-  let leng = arr.length;
-  return sum / leng;
+  let lang = arr.length;
+  return sum / lang;
 }
 const reducer = (state = initialState, action) => {
   const newState = { ...state };
 
   switch (action.type) {
-    case "RANDOM_RATING":
-      console.log("clicked");
+    case "RANDOM_RATING_START":
+      return {
+        ...state,
+        random_button_clicked: !state.random_button_clicked
+      };
       break;
-
     case "RATE_CHANGE":
-      console.log("rate changes");
       let val = parseInt(action.payload.val);
       let id = action.payload.id;
       return {

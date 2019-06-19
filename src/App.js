@@ -2,6 +2,7 @@ import React, { useMemo } from "react";
 import "./App.css";
 import { connect } from "react-redux";
 import MovieComponent from "./components/MovieComponent";
+import RandomComponent from "./components/RandomComponent";
 
 function App(props) {
   const orderList = useMemo(
@@ -14,7 +15,10 @@ function App(props) {
         <h1>TOP 10 Rating</h1>
       </header>
       <div className="container">
-        <button onClick={props.onRandomClick}>Random Rating</button>
+        <RandomComponent
+          clickHandle={props.onRandomClick}
+          randomClicked={props.random_button_clicked}
+        />
         {Object.keys(props.movies_list).map((movie, index = 0) => {
           return (
             <MovieComponent
@@ -31,12 +35,13 @@ function App(props) {
 const mapStateToProps = state => {
   const movies = state.movies;
   return {
-    movies_list: movies
+    movies_list: movies,
+    randomClicked: state.random_button_clicked
   };
 };
 const mapDispatchToProps = dispatch => {
   return {
-    onRandomClick: () => dispatch({ type: "RANDOM_RATING" }),
+    onRandomClick: () => dispatch({ type: "RANDOM_RATING_START" }),
     onRateChanges: (val, id) =>
       dispatch({ type: "RATE_CHANGE", payload: { val, id } })
   };
