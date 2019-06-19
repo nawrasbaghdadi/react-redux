@@ -75,8 +75,8 @@ h1{
   justify-content: flex-end;
 }
 .rating__child .rating__lead{
-  order: 1;
   margin-right: 10px;
+  order: 1;
 }
 .rating__hearts__heart {
   display: none;
@@ -87,11 +87,7 @@ h1{
 }
 .rating__child:first-child{
   margin-bottom: 20px;
-  direction: ltr;
-  justify-content: flex-start;
-}
-.rating__child:first-child .rating__lead{
-  order:0
+
 }
 .rating__hearts_label {
   color: #ddd;
