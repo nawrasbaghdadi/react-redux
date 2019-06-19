@@ -12,7 +12,7 @@ const MovieComponent = props => {
         index={i}
         initialRate={initialRate}
         hasInput={false}
-        key={Math.random()}
+        key={`previous_${i}`}
       />
     );
     currentRating.push(
@@ -22,7 +22,7 @@ const MovieComponent = props => {
         hasInput={true}
         rateHandle={props.rateHandle}
         movieId={movieId}
-        key={Math.random()}
+        key={`current_${i}`}
       />
     );
   }

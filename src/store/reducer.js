@@ -1,9 +1,15 @@
 import data from "./movies.json";
 const initialState = data;
 
+function avg(arr) {
+  let sum = arr.reduce((acc, crr) => {
+    return acc + crr;
+  }, 0);
+  let leng = arr.length;
+  return sum / leng;
+}
 const reducer = (state = initialState, action) => {
   const newState = { ...state };
-  //take the state and based on the action change the state and return new state , alwyas make copy of the state
 
   switch (action.type) {
     case "RANDOM_RATING":
@@ -12,11 +18,22 @@ const reducer = (state = initialState, action) => {
 
     case "RATE_CHANGE":
       console.log("rate changes");
-      console.log(action);
-      break;
+      let val = parseInt(action.payload.val);
+      let id = action.payload.id;
+      return {
+        ...state,
+        movies: state.movies.map(movie => {
+          if (movie.movie_id === id) {
+            const newVotes = [...movie.votes, val];
+            const newRate = avg(newVotes);
+            return { ...movie, votes: newVotes, rate: newRate };
+          }
+          return movie;
+        })
+      };
 
     default:
-      console.log("defult");
+      return newState;
   }
 
   //action.type === 'END_RANDOM_RATING'

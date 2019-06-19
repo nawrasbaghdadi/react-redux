@@ -10,7 +10,7 @@ const HeartComponent = props => {
     // prettier-ignore
     <Fragment>
     {(hasInput) &&
-      <input type="radio" id={`heart${props.index}_${props.movieId}`} name={`rating_${props.movieId}`} value={`${props.index}`} className="rating__hearts__heart"
+      <input type="radio" id={`heart${props.index}_${props.movieId}`} name={`rating_${props.movieId}`} value={props.index} className="rating__hearts__heart"
          onChange={e => props.rateHandle(e.target.value, props.movieId)} />
     }
       <label className={`rating__hearts_label ${isVoted ? "yes" : ""}`} htmlFor={`heart${props.index}_${props.movieId}`} title={`${props.index} heart`}>

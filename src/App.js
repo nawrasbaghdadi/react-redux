@@ -1,14 +1,13 @@
-import React from "react";
+import React, { useMemo } from "react";
 import "./App.css";
 import { connect } from "react-redux";
 import MovieComponent from "./components/MovieComponent";
 
 function App(props) {
-  console.log(props);
-  const orderList = props.movies_list.sort((a, b) =>
-    a.rate < b.rate ? 1 : -1
+  const orderList = useMemo(
+    () => props.movies_list.slice().sort((a, b) => b.rate - a.rate),
+    [props.movies_list]
   );
-  console.log(orderList);
   return (
     <div className="App">
       <header>
